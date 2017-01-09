@@ -1,15 +1,11 @@
 #include <DRV8838MotorShield.h>
-/* this example uses the DRV8838MotorShield class. I wanted a simpler class than
-    the one that Pololu wrote and give the user the ability to define the pins in the
-    declaration. I used both SLP pins. There are ways around this if pins are at a premium.
-*/
 
+//pin definitions are in the library.
 DRV8838MotorShield motors(7, 8, 9, 10, 11, 12);
 int LightPin_1 = 0;
 int LightPin_2 = 1;
 int speakerPin = 6;
-#define MIN_FREQ    100
-#define MAX_FREQ   8000
+
 void setup() {
   motors.init();
   //motors.flipM1();  //flip direction. e.g. if wired opposite, or whatever
